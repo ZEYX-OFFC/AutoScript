@@ -46,7 +46,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/SatanTech/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -62,9 +62,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/wingsofhope123/permission/main/ip 
+# https://raw.githubusercontent.com/SatanTech/permission/main/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/SatanTech/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -81,7 +81,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/wingsofhope123/permission/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/SatanTech/permission/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -126,8 +126,7 @@ green "Permission Accepted!"
 else
 red "Permission Denied!
 Please Buy AutoScript Premium
-WA: 082261333421
-Telegram: t.me/wingsofhope"
+Telegram: t.me/SatanTech26"
 rm setup.sh > /dev/null 2>&1
 sleep 10
 exit 0
@@ -364,25 +363,25 @@ echo -e "┌──────────────────────�
 echo -e " \E[41;1;39m           >>> Install Source <<<          \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/arzsource.sh && chmod +x arzsource.sh && ./arzsource.sh
+wget -q https://raw.githubusercontent.com/SatanTech/Kontol/main/tools/arzsource.sh && chmod +x arzsource.sh && ./arzsource.sh
 #install ssh-vpn
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m          >>> Install SSH / WS <<<        \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1
-wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/SatanTech/Kontol/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/SatanTech/Kontol/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
 echo -e "└─────────────────────────────────────────┘"
 sleep 1 
-wget -q https://raw.githubusercontent.com/wingsofhope123/agoez09/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/SatanTech/Kontol/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install ins-xray
 echo -e "┌─────────────────────────────────────────┐"
 echo -e " \E[41;1;39m            >>> Install slowdns <<<           \E[0m$NC"
@@ -392,35 +391,35 @@ wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/usernew.sh"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-ssws.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/add-tr.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/running.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/SatanTech/Kontol/main/usernew.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/SatanTech/Kontol/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/SatanTech/Kontol/main/add-ssws.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/SatanTech/Kontol/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/SatanTech/Kontol/main/add-tr.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/running.sh"
 #wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/arzvpn/Arzv/main/options/cek-trafik.sh"
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/cek-bandwidth.sh"
-wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/limitspeed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-vmess.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-trojan.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-ssh.sh"
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-backup.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu.sh"
-wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/update.sh"
-wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/addhost.sh"
-wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/crt.sh"
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/menu/menu-set.sh"
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/info.sh"
-wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/wingsofhope123/agoez09/main/options/infoserv.sh"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/SatanTech/Kontol/main/tools/speedtest_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/cek-bandwidth.sh"
+wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/limitspeed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-vmess.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-trojan.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-ssh.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-backup.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu.sh"
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/SatanTech/Kontol/main/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/update.sh"
+wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/addhost.sh"
+wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/crt.sh"
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-set.sh"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/info.sh"
+wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/infoserv.sh"
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
@@ -499,7 +498,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/wingsofhope123/agoez09/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/SatanTech/Kontol/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11

@@ -4,6 +4,6 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Sabar sayang Lagi Proses"
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
-echo -e " [INFO] Selesai Ganti Ns nya Sayang , Enter"
+echo -e " [INFO] Selesai Ganti Ns nya , Enter"
 sleep 2
 menu
