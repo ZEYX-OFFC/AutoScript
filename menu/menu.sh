@@ -178,17 +178,17 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 clear
 echo -e ""
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${PURPLE} │ 				                    	  	SATAN FUSION TUNNELING								  				   │${NC}"
-echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "${PURPLE} │ 				                	SATAN FUSION TUNNELING								    				   │${NC}"
+echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${PURPLE} │  ${PURPLE}  Use Core       : ${BIGreen}Satan Fusion ${NC}" 
-echo -e " ${PURPLE}│  ${PURPLE}  OS VPS         : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
+echo -e " ${PURPLE}│  ${PURPLE}  OS VPS         : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
 echo -e " ${PURPLE}│  ${PURPLE}  Current Domain : ${BIBlue}$(cat /etc/xray/domain)${NC}"
 echo -e " ${PURPLE}│  ${PURPLE}  SLOWDNS Domain : ${BIBlue}$(cat /root/nsdomain)${NC}"
 echo -e " ${PURPLE}│  ${PURPLE}  IP-VPS         : ${BIBlue}$IPVPS${NC}"
 echo -e " ${PURPLE}│  ${PURPLE}  ISP-Name       : ${BIGreen}$ISP${NC}"
-echo -e " ${PURPLE}│  ${PURPLE}  DATE&TIME      : $( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
+echo -e " ${PURPLE}│  ${PURPLE}  DATE&TIME      : ${BIGreen}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
 echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${PURPLE} │ \033[0m ${BOLD}${PURPLE}     SSH      VMESS       VLESS      TROJAN $NC" 
