@@ -67,7 +67,7 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/SatanTech/permission/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/wingshope10/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -178,7 +178,7 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 clear
 echo -e ""
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${PURPLE} │ \e033[1;92;91m				                    		SATAN FUSION TUNNELING								  				 \e033[0m\033[0;35m │${NC}"
+echo -e "${PURPLE} │ 				                    	  	SATAN FUSION TUNNELING								  				   │${NC}"
 echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}"
