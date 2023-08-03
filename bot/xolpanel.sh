@@ -5,8 +5,8 @@ rm -rf xolpanel.sh
 apt update && apt upgrade
 apt install python3 python3-pip git
 git clone https://github.com/SatanTech/Kontol/tree/main/bot
-unzip bot/xolpanel.zip
-pip3 install -r xolpanel/requirements.txt
+unzip bot/satanBot.zip
+pip3 install -r satanBot/requirements.txt
 pip3 install pillow
 
 #isi data
