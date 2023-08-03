@@ -4,5 +4,11 @@
 - Id Telegram : Found on [userinfobot](https://t.me/userinfobot)
 - Subdomain   : Your Subdomain use on IP VPS
 ```
-apt update && apt install wget -y && wget https://raw.githubusercontent.com/SatanTech/vps/master/bot%20telegram%20panel/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+apt update && apt upgrade
+apt install python3 python3-pip git
+git clone https://github.com/SatanTech/Kontol/tree/main/Bot
+unzip Bot/xolpanel.zip
+nano xolpanel/var.txt # Isi bot token, ID telegram, & domain VPS
+pip3 install -r xolpanel/requirements.txt
+pip3 install pillow
 ```
