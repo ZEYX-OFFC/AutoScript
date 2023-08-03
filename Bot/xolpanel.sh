@@ -7,8 +7,6 @@ git clone https://github.com/SatanTech/Kontol/tree/main/Bot
 unzip Bot/xolpanel.zip
 pip3 install -r xolpanel/requirements.txt
 pip3 install pillow
-mv xolpanel/xolpanel.service /etc/systemd/system/
-systemctl start xolpanel && systemctl enable xolpanel
 
 #isi data
 echo ""
