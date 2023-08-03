@@ -149,7 +149,7 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}════════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "${BICyan}Wings Premium VPN Auto Script Service${NC}" 
+echo -e "${BICyan}Satan Fusion Auto Script Service${NC}" 
 
 else
 clear
@@ -170,7 +170,7 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}════════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "${BICyan} Wings Premium Auto Script Service${NC}"
+echo -e "${BICyan}Satan Fusion Auto Script Service${NC}"
 fi
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
