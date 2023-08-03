@@ -5,7 +5,6 @@ apt update && apt upgrade
 apt install python3 python3-pip git
 git clone https://github.com/SatanTech/Kontol/tree/main/Bot
 unzip Bot/xolpanel.zip
-nano xolpanel/var.txt # Isi bot token, ID telegram, & domain VPS
 pip3 install -r xolpanel/requirements.txt
 pip3 install pillow
 mv xolpanel/xolpanel.service /etc/systemd/system/
