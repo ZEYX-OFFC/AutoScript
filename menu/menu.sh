@@ -178,13 +178,13 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 clear
 echo -e ""
 echo -e "${BIBlue} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIBlue} │  ${BIPurple}  Use Core       : ${BIGreen}Satan Fusion ${NC}" 
-echo -e " ${BIBlue}│  ${BIPurple}  OS VPS         : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
-echo -e " ${BIBlue}│  ${BIPurple}  Current Domain : ${BIBlue}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BIBlue}│  ${BIPurple}  SLOWDNS Domain : ${BIBlue}$(cat /root/nsdomain)${NC}"
-echo -e " ${BIBlue}│  ${BIPurple}  IP-VPS         : ${BIBlue}$IPVPS${NC}"
-echo -e " ${BIBlue}│  ${BIPurple}  ISP-Name       : ${BIGreen}$ISP${NC}"
-echo -e " ${BIBlue}│  ${BIPurple}  DATE&TIME      : ${BIGreen}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
+echo -e "${BIBlue} │  ${GREEN}  Use Core       : ${BIGreen}Satan Fusion ${NC}" 
+echo -e " ${BIBlue}│  ${GREEN}  OS VPS         : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
+echo -e " ${BIBlue}│  ${GREEN}  Current Domain : ${BIPurple}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BIBlue}│  ${GREEN}  SLOWDNS Domain : ${BIPurple}$(cat /root/nsdomain)${NC}"
+echo -e " ${BIBlue}│  ${GREEN}  IP-VPS         : ${BIPurple}$IPVPS${NC}"
+echo -e " ${BIBlue}│  ${GREEN}  ISP-Name       : ${BIGreen}$ISP${NC}"
+echo -e " ${BIBlue}│  ${GREEN}  DATE&TIME      : ${BIGreen}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIBlue} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${BIBlue} │ \033[0m ${BOLD}${BIPurple}     SSH      VMESS       VLESS      TROJAN $NC" 
@@ -213,19 +213,19 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-   echo -e " ${PURPLE}│$NC ${BIPurple} Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
+   echo -e " ${BIBlue}│$NC ${BIPurple} Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
 }
 mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BIBlue}│ ${BIPurple} Version       : $(cat /opt/.ver) Last Update ${NC}"
-echo -e " ${BIBlue}│ ${BIPurple} User          :\033[1;36m $Name \e[0m"
+echo -e " ${BIBlue}│ ${GREEN} Version       : $(cat /opt/.ver) Last Update ${NC}"
+echo -e " ${BIBlue}│ ${GREEN} User          :\033[1;36m $Name \e[0m"
 if [ $exp \< 1000 ];
 then
-echo -e " ${BIBlue}│$NC License     :${PURPLE}$sisa_hari$NC Days Tersisa $NC"
+echo -e " ${BIBlue}│$NC License     :${BIPurple}$sisa_hari$NC Days Tersisa $NC"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
+echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
 echo -e ""
