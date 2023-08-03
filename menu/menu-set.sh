@@ -115,6 +115,7 @@ echo -e " $BICyan│$NC   ${BICyan}[9]${NC}  • SPEEDTEST"
 echo -e " $BICyan│$NC   ${BICyan}[10]${NC} • LIMIT SPEED"
 echo -e " $BICyan│$NC   ${BICyan}[11]${NC} • WEBMIN"
 echo -e " $BICyan│$NC   ${BICyan}[12]${NC} • UPDATE SCRIPT"
+echo -e " $BICyan│$NC   ${BICyan}[13]${NC} • BOT PANEL"
 echo -e " $BICyan│$NC   ${BICyan}[0]${NC}  • BACK TO MENU"
 echo -e " $BICyan└───────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -133,6 +134,7 @@ case $opt in
 10 | 10) clear ; limitspeed ;;
 11 | 11) clear ; webmin ;;
 12 | 12) clear ; update ;;
+13 | 13) clear ; xolpanel ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
