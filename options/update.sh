@@ -107,7 +107,7 @@ wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/SatanTech/Kontol
 wget -q -O /usr/bin/running "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/running.sh"
 #wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/arzvpn/Arzv/main/options/cek-trafik.sh"
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/SatanTech/Kontol/main/tools/speedtest_cli.py"
-wget -q -O /usr/bin/botssh "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/botssh"
+wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/SatanTech/Kontol/main/bot/xolpanel.sh"
 wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/cek-bandwidth.sh"
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/limitspeed.sh"
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-vless.sh"
