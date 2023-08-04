@@ -119,6 +119,7 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/SatanTech/Kontol/mai
 wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/webmin.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/SatanTech/Kontol/main/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/SatanTech/Kontol/main/options/update.sh"
+wget -q -O /usr/bin/botssh "https://raw.githubusercontent.com/SatanTech/Kontol/main/bot/botssh.sh"
 wget -q -O /usr/bin/addhost "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/addhost.sh"
 wget -q -O /usr/bin/certxray "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/crt.sh"
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/SatanTech/Kontol/main/menu/menu-set.sh"
