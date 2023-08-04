@@ -128,6 +128,7 @@ wget -q -O /usr/bin/infoserv "https://raw.githubusercontent.com/SatanTech/Kontol
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
+chmod +x /usr/bin/xolpanel
 chmod +x /usr/bin/add-vless
 chmod +x /usr/bin/add-tr
 chmod +x /usr/bin/autoreboot
