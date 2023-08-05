@@ -143,6 +143,7 @@ echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "IP         : $IP" 
+echo -e "City      : $CITY"
 echo -e "ISP-Name  : $ISP"
 echo -e "Host       : $domen" 
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
@@ -169,8 +170,9 @@ echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "IP         : $IP" 
-echo -e "Host       : $domen" 
 echo -e "City      : $CITY"
+echo -e "ISP-Name  : $ISP"
+echo -e "Host       : $domen" 
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH    : $opensh"
