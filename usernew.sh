@@ -93,7 +93,8 @@ exit 0
 fi
 clear
 # Getting
-
+CITY=$(curl -s ipinfo.io/city)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10)
 sldomain=$(cat /root/nsdomain)
 cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /etc/slowdns/server.pub)
@@ -135,17 +136,17 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "${BIBlue}═══════════SSH INFORMATION═════════${NC}"
+echo -e "${BIBlue}════════════SSH ACCOUNTS══════════${NC}"
+echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
-echo -e "${BIBlue}═════════════SSH HOST════════════${NC}"
+echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "IP         : $IP" 
+echo -e "ISP-Name  : $ISP"
 echo -e "Host       : $domen" 
-echo -e "${BIBlue}═════════════SLOW DNS════════════${NC}"
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
-echo -e "${BIBlue}════════════SERVICE PORT══════════${NC}"
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : $portsshws" 
@@ -157,25 +158,25 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
-echo -e "${BICyan} Auto Script By Admin SF${NC}" 
+echo -e "${BICyan} Wings Premium VPN Auto Script Service${NC}" 
 
 else
 
-echo -e "${BIBlue}═══════════SSH INFORMATION═════════${NC}"
+echo -e "${BIBlue}════════════SSH ACCOUNTS══════════${NC}"
+echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
-echo -e "${BIBlue}═════════════SSH HOST════════════${NC}"
+echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "IP         : $IP" 
 echo -e "Host       : $domen" 
-echo -e "${BIBlue}═════════════SLOW DNS════════════${NC}"
+echo -e "City      : $CITY"
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
-echo -e "${BIBlue}════════════SERVICE PORT══════════${NC}"
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : $portsshws" 
-echo -e "SSH WS SSL : $wsssl" 
+echo -e "SSH-SSL-WS : $wsssl" 
 echo -e "SSL/TLS    : $ssl" 
 echo -e "SlowDNS    : 53,5300,443" 
 echo -e "SSH UDP    : $domen:1-65535@$Login:$Pass" 
@@ -183,8 +184,7 @@ echo -e "UDPGW      : 7100-7300"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
 echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "${BIBlue}══════════════════════════════════${NC}"
-echo -e "${BICyan} Auto Script By Admin SF${NC}" 
-
+echo -e "${BICyan} Wings Premium VPN Auto Script Service${NC}" 
 fi
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
