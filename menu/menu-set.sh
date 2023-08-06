@@ -20,7 +20,7 @@ IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
-BOT="https://raw.githubusercontent.com/SatanTech/xolpanel/main/"
+BOT="https://raw.githubusercontent.com/SatanTech/asep/main/"
 # // Export Color & Information
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
