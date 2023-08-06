@@ -20,7 +20,7 @@ IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
-
+BOT="https://raw.githubusercontent.com/SatanTech/xolpanel/main/"
 # // Export Color & Information
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
@@ -134,7 +134,7 @@ case $opt in
 10 | 10) clear ; limitspeed ;;
 11 | 11) clear ; webmin ;;
 12 | 12) clear ; update ;;
-13 | 13) clear ; xolpanel ;;
+13 | 13) clear ; wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
