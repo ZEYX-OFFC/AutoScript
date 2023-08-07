@@ -151,7 +151,7 @@ echo -e "${BIBlue}════════════════════�
 echo -e "Link GRPC : "
 echo -e "${trojanlink1}"
 echo -e "${BIBlue}════════════════════════════════════${NC}" 
-echo -e "${BICyan} Wings Premium VPN Auto Script Service${NC}" 
+echo -e "${BICyan} Satan Fusion Auto Script Service${NC}" 
 echo "" 
 read -n 1 -s -r -p "Press any key to back on menu"
 
