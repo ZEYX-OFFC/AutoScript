@@ -177,6 +177,10 @@ IPVPS=$(curl -s ipinfo.io/ip)
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 clear
 echo -e ""
+echo -e "${BIBlue} ┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e " \e[1;97;101m                                Satan Fusion Tunneling                           \e[0m"
+echo -e " ${BIBlue}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e ""
 echo -e "${BIBlue} ┌──────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIBlue} │  ${GREEN}  Use Core       : ${BIGreen}Satan Fusion ${NC}" 
 echo -e " ${BIBlue}│  ${GREEN}  OS VPS         : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
