@@ -150,7 +150,7 @@ echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
-echo -e "SSH-WS     : $portsshws" 
+echo -e "SSH-WS     : $portsshws,8880,8080" 
 echo -e "SSH WS SSL : $wsssl" 
 echo -e "SSL/TLS    : $ssl" 
 echo -e "SlowDNS    : 53,5300,443" 
@@ -178,7 +178,7 @@ echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : $portsshws" 
-echo -e "SSH-SSL-WS : $wsssl" 
+echo -e "SSH-SSL-WS : $wsssl,8880,8080" 
 echo -e "SSL/TLS    : $ssl" 
 echo -e "SlowDNS    : 53,5300,443" 
 echo -e "SSH UDP    : $domen:1-65535@$Login:$Pass" 
