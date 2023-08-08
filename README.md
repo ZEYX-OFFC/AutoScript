@@ -24,7 +24,7 @@
 ✅ Vless gRPC : 443 <br>
 ✅ Trojan gRPC : 443 <br>
 ✅ Shadowsocks gRPC : 443 <br>
-✅ SSH Websocket : 80 <br>
+✅ SSH Websocket : 80, 8880, 8080 <br>
 ✅ Vmess WS none TLS : 80 <br>
 ✅ Vless WS none TLS : 80 <br>
 ✅ Stunnel4 : 447,777 <br>
