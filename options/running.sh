@@ -144,7 +144,7 @@ basedong=$ID
 echo -e "$ITAM"
 REGION=$( curl -s ipinfo.io/region )
 #clear
-#COUNTRY=$( curl -s ipinfo.io/country )
+COUNTRY=$( curl -s ipinfo.io/country )
 #clear
 #WAKTU=$( curl -s ipinfo.ip/timezone )
 #clear
@@ -339,18 +339,25 @@ totalram=$(($total_ram/1024))
 #cpu_usage+=" %"
 
 # OS UPTIME
-#uptime="$(uptime -p | cut -d " " -f 2-10)"
+uptime="$(uptime -p | cut -d " " -f 2-10)"
 
 # KERNEL TERBARU
 kernelku=$(uname -r)
 
 # WAKTU SEKARANG 
-#harini=`date -d "0 days" +"%d-%m-%Y"`
+harini=`date -d "0 days" +"%d-%m-%Y"`
 #jam=`date -d "0 days" +"%X"`
 
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
-echo -e ""
+echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
+echo -e "    OS      : $uptime"
+echo -e "    Domain  : $Domen"
+echo -e "    Country : $COUNTRY"
+echo -e "    City    : $CITY"
+echo -e "    Expiry  : $hariini "
+echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
+
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
