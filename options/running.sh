@@ -351,7 +351,7 @@ harini=`date -d "0 days" +"%d-%m-%Y"`
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
-echo -e "                        Satan Fusion Tunneling
+echo -e "\E[44;1;39m             ⇱ Satan Fusion Tunneling ⇲            \E[0m"
 echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
 echo -e " IP VPS  : $MYIP"
 echo -e " Domain  : $Domen"
