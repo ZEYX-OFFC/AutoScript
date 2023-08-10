@@ -221,7 +221,7 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}┌──────────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BIBlue}│ ${GREEN} Version       : $(cat /opt/.ver) Last Update ${NC}"
+echo -e " ${BIBlue}│ ${GREEN} Version       : $(cat /opt/.ver) Libev ${NC}"
 echo -e " ${BIBlue}│ ${GREEN} User          :\033[1;36m $Name \e[0m"
 echo -e " ${BIBlue}│ ${GREEN} Developer     :\033[1;36m SatanTech \e[0m"
 if [ $exp \< 1000 ];
