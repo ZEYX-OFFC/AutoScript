@@ -207,8 +207,7 @@ echo -e "  ${BIBlue}  [${BIGreen}5${BIBlue}]${GREEN} SHADOWSOCKS ${NC}"
 echo -e "  ${BIBlue}  [${BIGreen}6${BIBlue}]${GREEN} BACKUP/RESTORE ${NC}"    
 echo -e "  ${BIBlue}  [${BIGreen}7${BIBlue}]${GREEN} SETTINGS ${NC}"    
 echo -e "  ${BIBlue}  [${BIGreen}8${BIBlue}]${GREEN} INFO SCRIPT ${NC}"  
-echo -e "  ${BIBlue}  [${BIGreen}9${BIBlue}]${GREEN} INFO SERVER ${NC}"    
-echo -e "  ${BIBlue}  [${BIGreen}10${BIBlue}]${GREEN} INSTAL UDP ${NC}" 
+echo -e "  ${BIBlue}  [${BIGreen}9${BIBlue}]${GREEN} INSTAL UDP ${NC}" 
 echo -e "  ${BIBlue}  [${BIGreen}x${BIBlue}]${GREEN} EXIT ${NC}"  
 echo -e "${BIBlue} └──────────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIBlue} ┌──────────────────────────────────────────────────────────┐${NC}" 
@@ -244,8 +243,7 @@ case $opt in
 6) clear ; menu-backup ;;
 7) clear ; menu-set ;;
 8) clear ; info ;;
-9) clear ; infoserv ;;
-10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+9) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 99) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
