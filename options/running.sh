@@ -351,11 +351,14 @@ harini=`date -d "0 days" +"%d-%m-%Y"`
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
-echo -e "    OS      : $uptime"
-echo -e "    Domain  : $Domen"
-echo -e "    Country : $COUNTRY"
-echo -e "    City    : $CITY"
-echo -e "    Expiry  : $hariini "
+echo -e "                        Satan Fusion Tunneling
+echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
+echo -e " IP VPS  : $MYIP"
+echo -e " Domain  : $Domen"
+echo -e " Country : $COUNTRY"
+echo -e " City    : $CITY"
+echo -e " Expiry  : $harini "
+echo -e " Uptime  : $uptime"
 echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
