@@ -225,10 +225,10 @@ mkdir -p /usr/local/etc/xray
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=scarzvpn.live
-SUB_DOMAIN=${sub}.scarzvpn.live
-CF_ID=arzstore22@gmail.com
-CF_KEY=8772ff286d8515ccb36caf0f0f69b2fde1831
+DOMAIN=satantech.cloud
+SUB_DOMAIN=sf-${sub}.satantech.cloud
+CF_ID=bangtepllo752@gmail.com
+CF_KEY=d8e5c652e1ddcc6fbfb20b1d7b6364de70c82
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
