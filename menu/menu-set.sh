@@ -147,26 +147,26 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-echo -e "$BICyan┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$BICyan│                  MENU SETTINGS                  │$NC"
-echo -e "$BICyan└─────────────────────────────────────────────────┘${NC}"
-echo -e " $BICyan┌───────────────────────────────────────────────┐${NC}"
-echo -e " $BICyan│$NC   ${BICyan}[1]${NC}  • ADD HOST/DOMAIN"
-echo -e " $BICyan│$NC   ${BICyan}[2]${NC}  • RENEW CERTXRAY"
-echo -e " $BICyan│$NC   ${BICyan}[3]${NC}  • CHECK RUNNING"
-echo -e " $BICyan│$NC   ${BICyan}[4]${NC}  • GANTI BANNER SSH "
-echo -e " $BICyan│$NC   ${BICyan}[5]${NC}  • INFO BANDWITH"
-echo -e " $BICyan│$NC   ${BICyan}[6]${NC}  • RESTART "
-echo -e " $BICyan│$NC   ${BICyan}[7]${NC}  • AUTO REBOOT"
-echo -e " $BICyan│$NC   ${BICyan}[8]${NC}  • REBOOT"
-echo -e " $BICyan│$NC   ${BICyan}[9]${NC}  • SPEEDTEST"
-echo -e " $BICyan│$NC   ${BICyan}[10]${NC} • LIMIT SPEED"
-echo -e " $BICyan│$NC   ${BICyan}[11]${NC} • WEBMIN"
-echo -e " $BICyan│$NC   ${BICyan}[12]${NC} • UPDATE SCRIPT"
-echo -e " $BICyan│$NC   ${BICyan}[13]${NC} • BOT PANEL"
-echo -e " $BICyan│$NC   ${BICyan}[14]${NC} • APP MONITOR ONLINE"
-echo -e " $BICyan│$NC   ${BICyan}[0]${NC}  • BACK TO MENU"
-echo -e " $BICyan└───────────────────────────────────────────────┘${NC}"
+echo -e "$BICyan ╔═════════════════════════════════════════════════╗${NC}"
+echo -e "$BICyan ║                      MENU SETTINGS                       ║$NC"
+echo -e "$BICyan ╚═════════════════════════════════════════════════╝${NC}"
+echo -e " $BICyan╔═════════════════════════════════════════════════╗${NC}"
+echo -e " $BICyan║$NC   ${BICyan}[1]${NC}  • ADD HOST/DOMAIN"
+echo -e " $BICyan║$NC   ${BICyan}[2]${NC}  • RENEW CERTXRAY"
+echo -e " $BICyan║$NC   ${BICyan}[3]${NC}  • CHECK RUNNING"
+echo -e " $BICyan║$NC   ${BICyan}[4]${NC}  • GANTI BANNER SSH "
+echo -e " $BICyan║$NC   ${BICyan}[5]${NC}  • INFO BANDWITH"
+echo -e " $BICyan║$NC   ${BICyan}[6]${NC}  • RESTART "
+echo -e " $BICyan║$NC   ${BICyan}[7]${NC}  • AUTO REBOOT"
+echo -e " $BICyan║$NC   ${BICyan}[8]${NC}  • REBOOT"
+echo -e " $BICyan║$NC   ${BICyan}[9]${NC}  • SPEEDTEST"
+echo -e " $BICyan║$NC   ${BICyan}[10]${NC} • LIMIT SPEED"
+echo -e " $BICyan║$NC   ${BICyan}[11]${NC} • WEBMIN"
+echo -e " $BICyan║$NC   ${BICyan}[12]${NC} • UPDATE SCRIPT"
+echo -e " $BICyan║$NC   ${BICyan}[13]${NC} • BOT PANEL"
+#echo -e " $BICyan│$NC   ${BICyan}[14]${NC} • APP MONITOR ONLINE"
+echo -e " $BICyan║$NC   ${BICyan}[0]${NC}  • BACK TO MENU"
+echo -e " $BICyan╚══════════════════════════════════════════════════╝${NC}"
 echo -e ""
 read -p "  Select menu :  "  opt
 echo -e   ""
@@ -184,7 +184,7 @@ case $opt in
 11 | 11) clear ; webmin ;;
 12 | 12) clear ; update ;;
 13 | 13) clear ; wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
-14 | 14) clear ; onapp_ssh ;;
+#14 | 14) clear ; onapp_ssh ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
