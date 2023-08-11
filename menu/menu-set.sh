@@ -148,7 +148,7 @@ exit 0
 fi
 clear
 echo -e "$BICyan ╔═════════════════════════════════════════════════╗${NC}"
-echo -e "$BICyan ║                      MENU SETTINGS                       ║$NC"
+echo -e "$BICyan ║                    MENU SETTINGS                   ║$NC"
 echo -e "$BICyan ╚═════════════════════════════════════════════════╝${NC}"
 echo -e " $BICyan╔═════════════════════════════════════════════════╗${NC}"
 echo -e " $BICyan║$NC   ${BICyan}[1]${NC}  • ADD HOST/DOMAIN"
