@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script By Arz
+#Script By SF
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
@@ -350,22 +350,22 @@ harini=`date -d "0 days" +"%d-%m-%Y"`
 
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
-echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
-echo -e "\E[44;1;39m             ⇱ Satan Fusion Tunneling ⇲            \E[0m"
-echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m             ⇱ Satan Fusion Tunneling ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " IP VPS  : $MYIP"
 echo -e " Domain  : $Domen"
 echo -e " Country : $COUNTRY"
 echo -e " City    : $CITY"
 echo -e " Expiry  : $harini "
 echo -e " Uptime  : $uptime"
-echo -e "${CYAN}━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━━═━═━═━═━═━═━━═━═\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " SSH / TUN               :$status_ssh"
-#echo -e "OpenVPN                 :$status_openvpn"
+#echo -e " OpenVPN                 :$status_openvpn"
 echo -e " Dropbear                :$status_beruangjatuh"
 echo -e " Stunnel5                :$status_stunnel"
 #echo -e " Squid                   :$status_squid"
