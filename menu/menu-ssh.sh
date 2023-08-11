@@ -20,6 +20,7 @@ IBlue='\033[0;94m'        # Blue
 IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
+BGCOLOR='\033[0;97:101m'  # bgcolor
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
@@ -521,10 +522,10 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 }
 clear
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan}│                      SSH MENU                   │$NC"
-echo -e "${BICyan}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${BICyan}┌───────────────────────────────────────────────┐${NC}"
+echo -e "${BICyan}╔═════════════════════════════════════════════════╗${NC}"
+echo -e "${BICyan}║ ${BGCOLOR}                     SSH MENU                  \e[0m ║$NC"
+echo -e "${BICyan}╚═════════════════════════════════════════════════╝${NC}"
+echo -e "${BICyan}╔═════════════════════════════════════════════════╗${NC}"
 echo -e "     ${BICyan}[1]${NC} Create SSH Account     "
 echo -e "     ${BICyan}[2]${NC} Trial SSH Acoount      "
 echo -e "     ${BICyan}[3]${NC} Delete SSH Acoount      "
@@ -536,7 +537,7 @@ echo -e "     ${BICyan}[8]${NC} Auto Kill user SSH    "
 echo -e "     ${BICyan}[9]${NC} Cek Member SSH"
 
 echo -e "     ${BICyan}[0]${NC} Back To Menu      "
-echo -e "${BICyan}└───────────────────────────────────────────────┘${NC}"
+echo -e "${BICyan}╚══════════════════════════════════════════════════╝${NC}"
 echo ""
 read -p " Select menu : " opt
 echo -e ""
