@@ -218,7 +218,7 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-   echo -e " ${BIBlue}│$NC ${GREEN} Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
+   echo -e " ${BIBlue}║$NC ${GREEN} Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
 }
 mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}╔══════════════════════════════════════════════════════════╗${NC}"
