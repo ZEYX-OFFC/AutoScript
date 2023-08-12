@@ -273,11 +273,11 @@ if [ -e "/var/log/secure" ]; then
 fi
                
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "\E[0;41;36m          Dropbear User Login       \E[0m"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo "ID  |  Username  |  IP Address";
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${BIBlue}╔══════════════════════════════════╗${NC}"
+echo -e "${BIBlue}║ ${NC}        Dropbear User Login       \E[0m${BIBlue}║${NC}"
+echo -e "${BIBlue}╠══════════════════════════════════╣${NC}"
+echo -e "${BIBlue}║ ${NC} ID  |   Username   |   IP Address    ${BIBlue} ║${NC}"
+echo -e "${BIBlue}╚══════════════════════════════════╝\033[0m"
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
 do
@@ -288,15 +288,13 @@ do
         if [ $NUM -eq 1 ]; then
                 echo "$PID - $USER - $IP";
         fi
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-
 done
 echo " "
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BIBlue}╔══════════════════════════════════╗${NC}"
 echo -e "\E[0;41;36m           OpenSSH User Login       \E[0m"
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BIBlue}╚══════════════════════════════════╝${NC}"
 echo "ID  |  Username  |  IP Address";
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BIBlue}╚══════════════════════════════════╝${NC}"
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 
@@ -309,8 +307,6 @@ do
         if [ $NUM -eq 1 ]; then
                 echo "$PID - $USER - $IP";
         fi
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-
 done
 if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
         echo " "
@@ -322,7 +318,6 @@ if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
         cat /etc/openvpn/server/openvpn-tcp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-tcp.txt
         cat /tmp/vpn-login-tcp.txt
 fi
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
         echo " "
@@ -334,7 +329,6 @@ if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
         cat /etc/openvpn/server/openvpn-udp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-udp.txt
         cat /tmp/vpn-login-udp.txt
 fi
-echo -e "${BIBlue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo "";
 
 rm -f /tmp/login-db-pid.txt
