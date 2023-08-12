@@ -274,9 +274,9 @@ fi
                
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo -e "${BIBlue}╔══════════════════════════════════╗${NC}"
-echo -e "${BIBlue}║ ${NC}        Dropbear User Login       \E[0m${BIBlue}║${NC}"
+echo -e "${BIBlue}║${NC} \e[1;97;101m       Dropbear User Login      \E[0m ${BIBlue}║${NC}"
 echo -e "${BIBlue}╠══════════════════════════════════╣${NC}"
-echo -e "${BIBlue}║ ${NC} ID  |   Username   |   IP Address    ${BIBlue} ║${NC}"
+echo -e "${BIBlue}║ ${NC}  ID   | Username |  IP Address ${BIBlue} ║${NC}"
 echo -e "${BIBlue}╚══════════════════════════════════╝\033[0m"
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
@@ -286,7 +286,7 @@ do
         USER=`cat /tmp/login-db-pid.txt | awk '{print $10}'`;
         IP=`cat /tmp/login-db-pid.txt | awk '{print $12}'`;
         if [ $NUM -eq 1 ]; then
-                echo "$PID - $USER - $IP";
+                echo " ► $PID - $USER - $IP";
         fi
 done
 echo " "
