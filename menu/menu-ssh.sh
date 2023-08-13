@@ -291,7 +291,7 @@ do
 done
 echo " "
 echo -e "${BIBlue}╔══════════════════════════════════════╗${NC}"
-echo -e "${BIBlue}║${NC} \e[1;97;101m         OpenSSH User Login        \E[0m ${BIBlue}║${NC}"
+echo -e "${BIBlue}║${NC} \e[1;97;101m         OpenSSH User Login         \E[0m ${BIBlue}║${NC}"
 echo -e "${BIBlue}╠══════════════════════════════════════╣${NC}"
 echo -e "${BIBlue}║ ${NC}  ID    | Username |   IP Address   ${BIBlue} ║${NC}"
 echo -e "${BIBlue}╚══════════════════════════════════════╝\033[0m"
