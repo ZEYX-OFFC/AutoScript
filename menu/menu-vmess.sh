@@ -221,7 +221,7 @@ echo -e "\033[0;34m════════════════════�
 echo -e "Link GRPC : "
 echo -e "${vmesslink3}"
 echo -e "\033[0;34m════════════════════════════════════${NC}" 
-echo -e "\033[0;34m Wings Premium VPN Auto Script Service${NC}"  
+echo -e "\033[0;34m Satan Fusion Auto Script Service${NC}"  
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-vmess
@@ -229,7 +229,7 @@ menu-vmess
 
 function trialvmess(){
 domain=$(cat /etc/xray/domain)
-user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=Satan`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -292,31 +292,34 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "\033[0;34m═════════════XRAY/VMESS═════════════\033[0m"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "Port TLS       : 443"
-echo -e "Port none TLS  : 80"
-echo -e "Port gRPC      : 443"
-echo -e "id             : ${uuid}"
-echo -e "alterId        : 0"
-echo -e "Security       : auto"
-echo -e "Network        : ws"
-echo -e "Path           : /vmess"
-echo -e "Path           : /worryfree" 
-echo -e "Path           : http://bug/worryfree" 
-echo -e "Path           : /kuota-habis" 
-echo -e "ServiceName    : vmess-grpc"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Link TLS       : ${vmesslink1}"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Link none TLS  : ${vmesslink2}"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Link gRPC      : ${vmesslink3}"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "Expired On     : $exp"
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
+echo -e "\033[0;34m═════════════XRAY/VMESS═════════════${NC}"
+echo -e "\033[0;34m════════════════════════════════════${NC}"
+echo -e "Remarks       : ${user}"
+echo -e "Expired On    : $exp" 
+echo -e "Domain        : ${domain}" 
+echo -e "Port TLS      : 443" 
+echo -e "Port none TLS : 80" 
+echo -e "Port  GRPC    : 443" 
+echo -e "id            : ${uuid}" 
+echo -e "alterId       : 0" 
+echo -e "Security      : auto" 
+echo -e "Network       : ws" 
+echo -e "Path          : /vmess" 
+echo -e "Path          : /worryfree" 
+echo -e "Path          : http://bug/worryfree" 
+echo -e "Path          : /kuota-habis" 
+echo -e "ServiceName   : vmess-grpc" 
+echo -e "\033[0;34m════════════════════════════════════${NC}"
+echo -e "Link TLS : "
+echo -e "${vmesslink1}" 
+echo -e "\033[0;34m════════════════════════════════════${NC}"
+echo -e "Link none TLS : "
+echo -e "${vmesslink2}" 
+echo -e "\033[0;34m════════════════════════════════════${NC} "
+echo -e "Link GRPC : "
+echo -e "${vmesslink3}"
+echo -e "\033[0;34m════════════════════════════════════${NC}" 
+echo -e "\033[0;34m Satan Fusion Auto Script Service${NC}"  
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-vmess
