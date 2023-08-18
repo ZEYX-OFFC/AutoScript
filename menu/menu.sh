@@ -225,7 +225,7 @@ mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e " ${BIBlue}║ ${GREEN} Version       : $(cat /opt/.ver) LTS ${NC}"
 echo -e " ${BIBlue}║ ${GREEN} User          :\033[1;36m $Name \e[0m"
-echo -e " ${BIBlue}║ ${GREEN} Developer     :\033[1;36m SF Tunnelp \e[0m"
+echo -e " ${BIBlue}║ ${GREEN} Developer     :\033[1;36m SF Tunnel \e[0m"
 if [ $exp \< 1000 ];
 then
 echo -e " ${BIBlue}║$NC License     :${BIPurple}$sisa_hari$NC Days Tersisa $NC"
