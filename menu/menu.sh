@@ -1,6 +1,4 @@
-#!/bin/bash
- # ========================================= 
- vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
+vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
 vmc=$(grep -c -E "^### " "/etc/xray/config.json")
 let vma=$vmc/2
@@ -73,9 +71,9 @@ BURIQ () {
     for user in "${data[@]}"
     do
     exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-d2=$(date -d "$date_list" +"+%s")
-d1=$(date -d "$Exp" +"+%s")
-dayleft=$(( ($d1 - $d2) / 86400 ))
+    d1=(`date -d "$exp" +%s`)
+    d2=(`date -d "$biji" +%s`)
+    exp2=$(( (d1 - d2) / 86400 ))
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
@@ -178,10 +176,6 @@ IPVPS=$(curl -s ipinfo.io/ip)
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 clear
 echo -e ""
-echo -e "${BIBlue} ╔══════════════════════════════════════════════════════════╗${NC}"
-echo -e "   ${BGCOLOR}                Satan Fusion Tunneling                  ${NC}"
-echo -e "${BIBlue} ╚══════════════════════════════════════════════════════════╝${NC}"
-
 echo -e "$(BIBlue}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${GREEN}      OS                     : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
 echo -e "${GREEN}      CITY                  : ${BIGreen}$CITY${NC}"
@@ -190,8 +184,6 @@ echo -e "${GREEN}      ISP-NAME        : ${BIGreen}$ISP${NC}"
 echo -e "${GREEN}      DOMAIN           : ${BIPurple}$(cat /etc/xray/domain)${NC}"
 echo -e "${GREEN}      NS DOMAIN     : ${BIPurple}$(cat /root/nsdomain)${NC}"
 echo -e "${GREEN}      DATE&TIME     : ${BIGreen}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
-echo -e "${GREEN}      USER                 :\033[1;36m $Name \e[0m"
-echo -e "${GREEN}      EXPIRY             : ${BIGreen}$Exp (${NC}${IRed} $dayleft Days ${NC}${IYellow})${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
 
 echo -e " ${BIPurple}    SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r"
@@ -215,25 +207,36 @@ echo -e "${BIBlue}     [${BIGreen} 09 ${BIBlue}]${BIGreen) INFO SCRIPT${NC}"
 echo -e "${BIBlue}     [${BIRed}  X  ${BIBlue}]${BIGreen} EXIT${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
 
+DATE=$(date +'%d %B %Y')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+echo -e " ${GREEN}   Expiry In                   : $(( (d1 - d2) / 86400 )) Days $NC"
+}
 echo -e "${BIBlue}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${GREEN}     VERSIONS${NC} 	 : ${BIGreen}$(cat /opt/.ver) LTS ${NC}"
+echo -e "${GREEN}     USER                         :\033[1;36m $Name \e[0m"
+if [ $exp \< 1000 ];
+then
+echo -e " ${GREEN}    License                     :${BIPurple}$sisa_hari$NC Days Tersisa $NC"
+else
+    datediff "$Exp" "$DATE"
+fi;
 echo -e "${GREEN}     DEVELOPER${NC}   : ${BIGreen}ADMIN SF${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
-echo
+
 read -p "━[ Select Menu ]━➤ : " menu
 echo -e ""
-case $opt in
-1) clear ; menu-ssh ;;
-2) clear ; menu-vmess ;;
-3) clear ; menu-vless ;;
-4) clear ; menu-trojan ;;
-5) clear ; menu-ss ;;
-6) clear ; menu-backup ;;
-7) clear ; menu-set ;;
-8) clear ; info ;;
-9) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-99) clear ; update ;;
-0) clear ; menu ;;
-x) exit ;;
+case $menu in
+01 | 1) clear ; menu-ssh ;;
+02 | 2) clear ; menu-vmess ;;
+03 | 3) clear ; menu-vless ;;
+04 | 4) clear ; menu-trojan ;;
+05 | 5) clear ; menu-ss ;;
+06 | 6) clear ; menu-backup ;;
+07 | 7) clear ; menu-set ;;
+08 | 8) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+09 | 9) clear ; info ;;
+X | x ) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
 esac
