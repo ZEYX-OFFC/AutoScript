@@ -20,6 +20,7 @@ IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
+BGCOLOR='\e[1;97;101m'    # WHITE RED
 BOT="https://raw.githubusercontent.com/SatanTech/asep/main/"
 # // Export Color & Information
 export RED='\033[0;31m'
@@ -148,7 +149,7 @@ exit 0
 fi
 clear
 echo -e "$BICyan ╔═════════════════════════════════════════════════╗${NC}"
-echo -e "$BICyan ║                    MENU SETTINGS                   ║$NC"
+echo -e "$BICyan ║ ${BGCOLOR}                  MENU SETTINGS                ${NC}${BICyan} ║$NC"
 echo -e "$BICyan ╚═════════════════════════════════════════════════╝${NC}"
 echo -e " $BICyan╔═════════════════════════════════════════════════╗${NC}"
 echo -e " $BICyan║$NC   ${BICyan}[1]${NC}  • ADD HOST/DOMAIN"
