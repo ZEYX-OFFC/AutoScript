@@ -1,4 +1,6 @@
-vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
+#!/bin/bash
+ # ========================================= 
+ vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
 vmc=$(grep -c -E "^### " "/etc/xray/config.json")
 let vma=$vmc/2
@@ -65,20 +67,15 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
-data_ip="https://kytvpn.xcodehoster.com/izin"
-d2=$(date -d "$date_list" +"+%s")
-d1=$(date -d "$Exp" +"+%s")
-dayleft=$(( ($d1 - $d2) / 86400 ))
-
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/SatanTech/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
     exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
+d2=$(date -d "$date_list" +"+%s")
+d1=$(date -d "$Exp" +"+%s")
+dayleft=$(( ($d1 - $d2) / 86400 ))
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
@@ -181,16 +178,20 @@ IPVPS=$(curl -s ipinfo.io/ip)
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 clear
 echo -e ""
+echo -e "${BIBlue} ╔══════════════════════════════════════════════════════════╗${NC}"
+echo -e "   ${BGCOLOR}                Satan Fusion Tunneling                  ${NC}"
+echo -e "${BIBlue} ╚══════════════════════════════════════════════════════════╝${NC}"
+
 echo -e "$(BIBlue}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${GREEN}      OS            : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
-echo -e "${GREEN}      CITY          : ${BIGreen}$CITY${NC}"
-echo -e "${GREEN}      IP VPS        : ${BIPurple}$IPVPS${NC}"
-echo -e "${GREEN}      ISP-NAME      : ${BIGreen}$ISP${NC}"
-echo -e "${GREEN}      DOMAIN        : ${BIPurple}$(cat /etc/xray/domain)${NC}"
+echo -e "${GREEN}      OS                     : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
+echo -e "${GREEN}      CITY                  : ${BIGreen}$CITY${NC}"
+echo -e "${GREEN}      IP VPS              : ${BIPurple}$IPVPS${NC}"
+echo -e "${GREEN}      ISP-NAME        : ${BIGreen}$ISP${NC}"
+echo -e "${GREEN}      DOMAIN           : ${BIPurple}$(cat /etc/xray/domain)${NC}"
 echo -e "${GREEN}      NS DOMAIN     : ${BIPurple}$(cat /root/nsdomain)${NC}"
 echo -e "${GREEN}      DATE&TIME     : ${BIGreen}$( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
-echo -e "${GREEN}      USER          :\033[1;36m $Name \e[0m"
-echo -e "${GREEN}      EXPIRY        : ${BIGreen}$Exp (${NC}${IRed} $dayleft Days ${NC}${IYellow})${NC}"
+echo -e "${GREEN}      USER                 :\033[1;36m $Name \e[0m"
+echo -e "${GREEN}      EXPIRY             : ${BIGreen}$Exp (${NC}${IRed} $dayleft Days ${NC}${IYellow})${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
 
 echo -e " ${BIPurple}    SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r"
@@ -215,22 +216,24 @@ echo -e "${BIBlue}     [${BIRed}  X  ${BIBlue}]${BIGreen} EXIT${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
 
 echo -e "${BIBlue}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${GREEN}     VERSIONS${NC} 	  : ${BIGreen}$(cat /opt/.ver) LTS ${NC}"
+echo -e "${GREEN}     VERSIONS${NC} 	 : ${BIGreen}$(cat /opt/.ver) LTS ${NC}"
 echo -e "${GREEN}     DEVELOPER${NC}   : ${BIGreen}ADMIN SF${NC}"
 echo -e "${BIBlue}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
-
+echo
 read -p "━[ Select Menu ]━➤ : " menu
 echo -e ""
-case $menu in
-01 | 1) clear ; menu-ssh ;;
-02 | 2) clear ; menu-vmess ;;
-03 | 3) clear ; menu-vless ;;
-04 | 4) clear ; menu-trojan ;;
-05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-backup ;;
-07 | 7) clear ; menu-set ;;
-08 | 8) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-09 | 9) clear ; info ;;
-X | x ) exit ;;
+case $opt in
+1) clear ; menu-ssh ;;
+2) clear ; menu-vmess ;;
+3) clear ; menu-vless ;;
+4) clear ; menu-trojan ;;
+5) clear ; menu-ss ;;
+6) clear ; menu-backup ;;
+7) clear ; menu-set ;;
+8) clear ; info ;;
+9) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+99) clear ; update ;;
+0) clear ; menu ;;
+x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
 esac
