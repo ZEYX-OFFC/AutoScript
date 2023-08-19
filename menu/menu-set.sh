@@ -184,7 +184,7 @@ case $opt in
 10 | 10) clear ; limitspeed ;;
 11 | 11) clear ; webmin ;;
 12 | 12) clear ; update ;;
-13 | 13) clear ; wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+13 | 13) clear ; botssh ;;
 #14 | 14) clear ; onapp_ssh ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
