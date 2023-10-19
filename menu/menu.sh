@@ -179,11 +179,11 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 clear
 echo -e ""
 echo -e "${BIBlue} ╔══════════════════════════════════════════════════════════╗${NC}"
-echo -e "   ${BGCOLOR}                Satan Fusion Tunneling                  ${NC}"
+echo -e "   ${BGCOLOR}                NEBULA CLOUD TUNNELING                  ${NC}"
 echo -e "${BIBlue} ╚══════════════════════════════════════════════════════════╝${NC}"
 
 echo -e "${BIBlue} ╔══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${BIBlue} ║  ${GREEN}  Use Core       : ${BIGreen}Satan Fusion ${NC}" 
+echo -e "${BIBlue} ║  ${GREEN}  Use Core       : ${BIGreen} Nebula Cloud${NC}" 
 echo -e "${BIBlue} ║  ${GREEN}  City           : ${BIGreen}$CITY${NC}"
 echo -e " ${BIBlue}║  ${GREEN}  OS VPS         : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
 echo -e " ${BIBlue}║  ${GREEN}  Current Domain : ${BIPurple}$(cat /etc/xray/domain)${NC}"
@@ -225,7 +225,7 @@ mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}╔══════════════════════════════════════════════════════════╗${NC}"
 echo -e " ${BIBlue}║ ${GREEN} Version       : $(cat /opt/.ver) LTS ${NC}"
 echo -e " ${BIBlue}║ ${GREEN} User          :\033[1;36m $Name \e[0m"
-echo -e " ${BIBlue}║ ${GREEN} Developer     :\033[1;36m SF Tunnel \e[0m"
+echo -e " ${BIBlue}║ ${GREEN} Developer     :\033[1;36m Zeyx-OFFC \e[0m"
 if [ $exp \< 1000 ];
 then
 echo -e " ${BIBlue}║$NC License     :${BIPurple}$sisa_hari$NC Days Tersisa $NC"
