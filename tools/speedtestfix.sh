@@ -7,7 +7,7 @@ cd
 rm -rf /usr/bin/speedtest
 echo -e "\e[1;32m Start download speedtest.. \e[0m"
 cd /usr/bin
-wget -O speedtest "https://raw.githubusercontent.com/SatanTech/Kontol/master/fix/speedtest"
+wget -O speedtest "https://raw.githubusercontent.com/ZEYX-OFFC/AutoScript/master/fix/speedtest"
 chmod +x speedtest
 clear
 echo -e "\e[1;32m Setup done Please wait.. \e[0m"
