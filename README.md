@@ -1,5 +1,5 @@
-# SATAN FUSION
-<pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/SatanTech/Kontol/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
+# NEBULA CLOUD
+<pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/ZEYX-OFFC/AutoScript/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
 
 ## HARGA AUTOSCRIPT
 ### _1 Bulan 10k_
@@ -7,7 +7,8 @@
 ### _Source script 400k_
 
 ## Silahkan Hubungi
-### https://t.me/SatanTech26
+### https://wa.me/6281224676791
+### (--[ZEYX OFFICIAL]--)
 
 ## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
 ### Support Vmess Multipath <br> 
@@ -28,5 +29,3 @@
 ✅ Vmess WS none TLS : 80 <br>
 ✅ Vless WS none TLS : 80 <br>
 ✅ Stunnel4 : 447,777 <br>
-
-<a href="https://ibb.co/y8sTph1"><img src="https://i.ibb.co/0fJNKBS/Screenshot-20230803-105213-2.png" alt="Screenshot-20230803-105213-2" border="0"></a>
